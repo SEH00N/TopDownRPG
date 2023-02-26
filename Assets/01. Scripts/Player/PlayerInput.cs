@@ -22,5 +22,6 @@ public class PlayerInput : MonoBehaviour
         Vector2 input = new Vector2(x, z);
 
         playerComponent.Movement.DoMove(input);
+        playerComponent.Rotator.DoRotate(input);
     }
 }

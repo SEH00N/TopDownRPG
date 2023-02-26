@@ -11,4 +11,14 @@ public class PlayerComponent : MonoBehaviour
             return movement;
         }
     }
+
+    private PlayerRotator rotator = null;
+    public PlayerRotator Rotator {
+        get {
+            if(rotator == null)
+                rotator = GetComponent<PlayerRotator>();
+            
+            return rotator;
+        }
+    }
 }
