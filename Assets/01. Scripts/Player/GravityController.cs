@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GravityController : MonoBehaviour
@@ -9,7 +7,7 @@ public class GravityController : MonoBehaviour
 
     private Rigidbody rb = null;
 
-    private float rayDistance = 1f;
+    private float rayDistance = 0.3f;
     private bool isGround = false;
 
     private void Awake()
@@ -37,5 +35,5 @@ public class GravityController : MonoBehaviour
         }
     }
 
-    private bool CheckGround() => Physics.Raycast(transform.position, Vector3.down, rayDistance, 1 << 6);
+    private bool CheckGround() => Physics.Raycast(transform.position, Vector3.down, rayDistance, DEFINE.GroundLayer);
 }
